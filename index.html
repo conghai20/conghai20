@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huynh Cong Hai - CV Premium</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --primary-teal: #00796B;
+      --primary-light: #B2DFDB;
+      --dark-bg: #e9ecef;
+      --text-main: #334155;
+      --text-muted: #64748B;
+      --text-light: #F8FAFC;
+      --border-color: #E2E8F0;
+      --bg-card: #F8FAFC;
+      /* Màu nền nhạt cho các khối nội dung */
+    }
+
+    /* Lệnh ép trình duyệt in cả màu nền (rất quan trọng khi xuất PDF) */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--dark-bg);
+      color: var(--text-main);
+      font-size: 13.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .lucide {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cv-wrapper {
+      max-width: 1050px;
+      margin: 0 auto;
+      border-radius: 4px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .cv-box {
+      display: flex;
+      width: 100%;
+    }
+
+    /* --- CỘT TRÁI --- */
+    .left-col {
+      width: 63%;
+      padding: 45px 50px;
+      box-sizing: border-box;
+    }
+
+    .header-left h1 {
+      margin: 0 0 5px 0;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0F172A;
+    }
+
+    .header-left h2 {
+      margin: 0 0 25px 0;
+      font-size: 18px;
+      color: var(--primary-teal);
+      font-weight: 500;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--text-muted) !important;
+      margin-bottom: 35px;
+    }
+
+    .contact-info span,
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+    }
+
+    .contact-info .lucide {
+      color: var(--primary-teal);
+      width: 16px;
+      height: 16px;
+    }
+
+    h3.section-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--primary-teal);
+      letter-spacing: 1px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    h3.section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background-color: var(--primary-teal);
+      border-radius: 2px;
+    }
+
+    .right-col h3.section-title::after {
+      background-color: #fff;
+    }
+
+    strong {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .right-col strong {
+      color: #fff;
+    }
+
+    /* KIỂU DÁNG CHO SUMMARY */
+    .summary-card {
+      background-color: rgba(0, 121, 107, 0.05);
+      border-left: 4px solid var(--primary-teal);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 25px;
+      margin-top: 10px;
+    }
+
+    .summary-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .summary-card li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .summary-card li:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-card .lucide {
+      flex-shrink: 0;
+      color: var(--primary-teal);
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .summary-card strong {
+      color: var(--primary-teal);
+    }
+
+    /* --- KIỂU DÁNG TIMELINE MỚI CHO EXPERIENCE --- */
+    .company-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .company-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      background-color: var(--primary-teal);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .company-header h4 {
+      margin: 0 0 2px 0;
+      font-size: 18px;
+      color: #0F172A;
+    }
+
+    .company-header span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .timeline {
+      border-left: 2px solid var(--primary-teal);
+      margin-left: 22px;
+      /* Căn giữa dưới icon công ty */
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    /* Dấu chấm tròn trên trục thời gian */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -41px;
+      /* Kéo ra đặt lên trục line */
+      top: 24px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border: 3px solid var(--primary-teal);
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    /* Mũi tên chỉ vào card */
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 25px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-bottom: 1px solid var(--border-color);
+      border-left: 1px solid var(--border-color);
+      transform: rotate(45deg);
+    }
+
+    .time-badge {
+      display: inline-block;
+      background-color: var(--primary-light);
+      color: #00564d;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .time-badge.onsite {
+      background-color: #FFE0B2;
+      /* Màu cam nhạt nổi bật cho on-site */
+      color: #E65100;
+    }
+
+    .role-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0F172A;
+      margin: 0 0 12px 0;
+    }
+
+    .role-title span {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    .timeline-item ul {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .timeline-item ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .timeline-item ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--primary-teal);
+      font-weight: bold;
+      font-size: 14px;
+      top: -1px;
+    }
+
+    .timeline-item ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .progress-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .progress-item .lucide {
+      color: var(--primary-teal);
+      width: 18px;
+      height: 18px;
+    }
+
+    .progress-label {
+      width: 120px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .progress-bar-container {
+      flex-grow: 1;
+      height: 8px;
+      background-color: var(--border-color);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: var(--primary-teal);
+      border-radius: 4px;
+    }
+
+    .interests-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .interest-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .interest-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: rgba(0, 121, 107, 0.1);
+      color: var(--primary-teal);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .interest-text strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .interest-text p {
+      margin: 0;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* --- CỘT PHẢI --- */
+    .right-col {
+      width: 37%;
+      background: linear-gradient(145deg, var(--primary-teal) 0%, #00564d 100%);
+      color: var(--text-light);
+      padding: 50px 40px;
+      box-sizing: border-box;
+    }
+
+    .portrait-container {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 35px auto;
+      border-radius: 50%;
+      padding: 4px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background-color: #fff;
+    }
+
+    .right-col h3.section-title {
+      color: #fff;
+      border-bottom: none;
+    }
+
+    .achievements-list-custom {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .achievements-list-custom li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+    }
+
+    .achievements-list-custom .lucide {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--primary-light);
+      width: 20px;
+      height: 20px;
+    }
+
+    .achievements-list-custom p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .achievements-list-custom strong {
+      display: block;
+      font-size: 13.5px;
+      margin-bottom: 2px;
+      color: #fff;
+    }
+
+    .education-item {
+      margin-bottom: 25px;
+      border-left: 2px solid rgba(255, 255, 255, 0.3);
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .education-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0 0 5px 0;
+    }
+
+    .edu-school {
+      color: var(--primary-light);
+      margin: 0 0 5px 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .edu-date-loc {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    .skill-group {
+      margin-bottom: 25px;
+    }
+
+    .skill-list-category {
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      font-size: 13.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+
+    .skill-list-category .lucide {
+      color: var(--primary-light);
+      width: 16px;
+      height: 16px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+    }
+
+    /* --- KIỂU DÁNG MỚI CHO CERTIFICATIONS (HÌNH ẢNH) --- */
+    .cert-images-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .cert-item-thumb {
+      width: calc(50% - 8px);
+      /* Chia đôi container trừ đi gap */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      padding: 8px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .cert-item-thumb strong {
+      display: block;
+      color: #fff;
+      font-size: 11px;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .cert-image-thumb {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      object-fit: cover;
+      /* Nền trắng cho ảnh trong suốt nếu có */
+    }
+
+    .expertise-progress .progress-item {
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .expertise-progress .progress-label {
+      color: #fff;
+      font-weight: 500;
+      font-size: 12.5px;
+      width: auto;
+      min-width: 130px;
+    }
+
+    .expertise-progress .progress-bar-container {
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 6px;
+      flex-grow: 1;
+    }
+
+    .expertise-progress .progress-bar {
+      background-color: #fff;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background-color: #fff;
+      }
+
+      .cv-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .timeline-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+
+      /* Tránh ngắt trang giữa chừng timeline item */
+      .cert-item-thumb {
+        border: 1px solid #ddd;
+        background-color: #fff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv-wrapper">
+    <div class="cv-box">
+      <div class="left-col">
+        <header class="header-left">
+          <h1>HUYNH CONG HAI</h1>
+          <h2>DevOps, AWS, Cloud</h2>
+          <div class="contact-info">
+            <a href="mailto:conghai20@gmail.com"><i data-lucide="mail"></i> conghai20@gmail.com</a>
+            <a href="https://www.linkedin.com/in/haryo-hh"><i data-lucide="link"></i>
+              linkedin.com/in/hai-huynh-cong</a>
+            <span><i data-lucide="map-pin"></i> Ho Chi Minh City</span>
+          </div>
+        </header>
+
+        <section class="summary" style="margin-bottom: 40px;">
+          <h3 class="section-title">Professional Summary</h3>
+          <div class="summary-card">
+            <ul>
+              <li>
+                <i data-lucide="cloud"></i>
+                <div><strong>Cloud Architecture:</strong> AWS Certified Solutions Architect Professional (SAP-C02) with
+                  hands-on experience designing and provisioning resilient cloud infrastructure.</div>
+              </li>
+              <li>
+                <i data-lucide="box"></i>
+                <div><strong>Containerization & Orchestration:</strong> Proficient in building and deploying scalable
+                  container-based solutions on Kubernetes.</div>
+              </li>
+              <li>
+                <i data-lucide="shield-check"></i>
+                <div><strong>Automation & Security:</strong> Developed and optimized CI/CD pipelines (GitLab CI,
+                  Jenkins) to ensure fast delivery. Ensured system security via SSO and LDAP authentication.</div>
+              </li>
+              <li>
+                <i data-lucide="activity"></i>
+                <div><strong>Observability:</strong> Implemented comprehensive monitoring tools (Prometheus, Grafana) to
+                  ensure optimal system health and minimize downtime.</div>
+              </li>
+              <li>
+                <i data-lucide="code"></i>
+                <div><strong>Software Engineering:</strong> Leveraged deep proficiency in Javascript, TypeScript,
+                  Python, and C++ to support diverse engineering requirements and infrastructure automation.</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="experience" style="margin-bottom: 40px;">
+          <h3 class="section-title">Experience Timeline</h3>
+
+          <div class="company-header">
+            <div class="company-icon"><i data-lucide="building-2" style="width: 24px; height: 24px;"></i></div>
+            <div>
+              <h4>CUBE SYSTEM VIETNAM Co., Ltd.</h4>
+              <span>Total Duration: 05/2021 - Present</span>
+            </div>
+          </div>
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <span class="time-badge">04/2025 - Present</span>
+              <p class="role-title">Senior Developer <span>| Ho Chi Minh City</span></p>
+              <ul>
+                <li><strong>Cloud Architecture:</strong> Managed and optimized multi-cloud infrastructure (AWS, GCP,
+                  Azure). Provided strategic architecture solutions to maximize cost-efficiency and system performance.
+                </li>
+                <li><strong>System Observability:</strong> Monitored system health and resource consumption platforms
+                  via a combination of open source (Prometheus, Grafana) and cloud-native tools.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <span class="time-badge onsite"><i data-lucide="plane-takeoff"
+                  style="width:12px; height:12px; margin-right:4px;"></i>08/2024 - 03/2025</span>
+              <p class="role-title">Senior Developer <span>| Tokyo, Japan (On-site)</span></p>
+              <ul>
+                <li><strong>Global Product Delivery:</strong> Successfully delivered a real estate software product from
+                  conceptualization to release, including direct on-site collaboration with stakeholders in Japan.</li>
+                <li><strong>Project Consulting:</strong> Directed the technical implementation of new application
+                  features, advising project teams on optimal techniques including caching mechanisms, Elasticsearch,
+                  and Pub/Sub.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <span class="time-badge">01/2023 - 07/2024</span>
+              <p class="role-title">Senior Developer <span>| Ho Chi Minh City</span></p>
+              <ul>
+                <li><strong>Kubernetes & Microservices:</strong> Architected and migrated monolithic applications to
+                  microservices. Automated and managed Helm charts to standardize deployment environments.</li>
+                <li><strong>DevOps & Automation:</strong> Enhanced development velocity by designing and implementing
+                  robust CI/CD pipelines and infrastructure automation.</li>
+                <li><strong>Security:</strong> Enhanced enterprise user management, authentication & authorization using
+                  SSO (Keycloak) and LDAP.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <span class="time-badge">07/2021 - 12/2022</span>
+              <p class="role-title">Developer <span>| Ho Chi Minh City</span></p>
+              <ul>
+                <li><strong>Full-Stack Software Engineering:</strong> Spearheaded the development of diverse web
+                  applications, including a robust HRM system utilizing PHP (CodeIgniter 3) and a high-performance
+                  enterprise mailing platform (Vue.js 2, Laravel).</li>
+                <li><strong>Mobile App Development:</strong> Designed and deployed a cross-platform mobile ride-sharing
+                  application using React Native.</li>
+                <li><strong>Containerization & Cloud Deployment:</strong> Containerized all applications with Docker.
+                  Independently managed the end-to-end deployment lifecycle on AWS EC2.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <span class="time-badge">05/2021 - 07/2021</span>
+              <p class="role-title">Intern <span>| Ho Chi Minh City</span></p>
+              <ul>
+                <li><strong>Smart Management System:</strong> Engineered a comprehensive water meter management
+                  dashboard utilizing Next.js for a highly responsive frontend and GraphQL for efficient data querying.
+                </li>
+                <li><strong>AI Integration:</strong> Integrated AI-driven Optical Character Recognition (OCR)
+                  capabilities to automate the scanning and extraction of water meter readings, reducing manual entry
+                  errors.</li>
+                <li><strong>System Deployment:</strong> Independently configured the hosting environment and deployed
+                  the full-stack application onto a Linux server.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="languages-section" style="margin-bottom: 35px;">
+          <h3 class="section-title">Languages</h3>
+          <div class="progress-item">
+            <span class="progress-label">English - TOEIC 745</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="progress-label">Japanese - N3</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="interests-section">
+          <h3 class="section-title">Interests</h3>
+          <div class="interests-list">
+            <div class="interest-item">
+              <div class="interest-icon"><i data-lucide="activity"></i></div>
+              <div class="interest-text">
+                <strong>Sporting</strong>
+                <p>I go to the gym after work.</p>
+              </div>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon"><i data-lucide="book-open"></i></div>
+              <div class="interest-text">
+                <strong>IT Blog Reading</strong>
+                <p>Reading tech blogs to broaden knowledge.</p>
+              </div>
+            </div>
+            <div class="interest-item" style="grid-column: 1 / -1; max-width: 60%;">
+              <div class="interest-icon"><i data-lucide="headphones"></i></div>
+              <div class="interest-text">
+                <strong>Gaming, Music & Hang out</strong>
+                <p>At weekends, I play games and chill with music.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="right-col">
+        <div class="portrait-container">
+          <img src="assets/avatar.jpg" alt="Portrait" class="portrait-img">
+        </div>
+
+        <section style="margin-bottom: 40px;">
+          <h3 class="section-title">Key Achievements</h3>
+          <ul class="achievements-list-custom">
+            <li>
+              <i data-lucide="zap"></i>
+              <div>
+                <strong>Cloud & Cost Optimization</strong>
+                <p>Managed multi-node Kubernetes cluster utilizing IaC (CloudFormation, Terraform) and Karpenter.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="shield-check"></i>
+              <div>
+                <strong>DevOps & Security</strong>
+                <p>Automated deployment using Docker, Helm, CI/CD. Enhanced security via SSO and LDAP.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="globe"></i>
+              <div>
+                <strong>Global Product Delivery</strong>
+                <p>Delivered real estate software with direct on-site collaboration with stakeholders in Japan.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="cpu"></i>
+              <div>
+                <strong>AI & Full-Stack Innovation</strong>
+                <p>Developed automated water meter management (Next.js, GraphQL) integrating AI-driven OCR.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="layers"></i>
+              <div>
+                <strong>End-to-End Engineering</strong>
+                <p>Independently developed and deployed 3 applications across Vue 3, React Native, and PHP.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="education-section" style="margin-bottom: 40px;">
+          <h3 class="section-title">Education</h3>
+          <div class="education-item">
+            <p class="edu-degree">Bachelor's degree, Computer Science</p>
+            <p class="edu-school">Ho Chi Minh City University of Technology</p>
+            <p class="edu-date-loc">11/2018 | Ho Chi Minh City, Vietnam</p>
+          </div>
+        </section>
+
+        <section class="skills-section" style="margin-bottom: 40px;">
+          <h3 class="section-title">Skills</h3>
+
+          <div class="skill-group">
+            <p class="skill-list-category"><i data-lucide="cloud"></i> Cloud & Infrastructure</p>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">GCP</span>
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Helm</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-list-category"><i data-lucide="git-merge"></i> CI/CD & DevOps</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Gitlab-CI</span>
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">ArgoCD</span>
+              <span class="skill-tag">SSO (Keycloak)</span>
+              <span class="skill-tag">LDAP</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-list-category"><i data-lucide="activity"></i> System Observability</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Prometheus</span>
+              <span class="skill-tag">Grafana</span>
+              <span class="skill-tag">CloudWatch</span>
+              <span class="skill-tag">Elasticsearch</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-list-category"><i data-lucide="layout-template"></i> Architecture & Design</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Multi-cloud / Hybrid</span>
+              <span class="skill-tag">Multi-tenant</span>
+              <span class="skill-tag">Pub/Sub</span>
+              <span class="skill-tag">Distributed Systems</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-list-category"><i data-lucide="code"></i> Programming & Others</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Javascript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">AI Integration</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="certifications cert-item" style="margin-bottom: 40px;">
+          <h3 class="section-title">Certifications</h3>
+
+          <div class="cert-images-container">
+            <div class="cert-item-thumb">
+              <strong>AWS Solutions Architect – Professional (SAP-C02)</strong>
+              <img src="https://miro.medium.com/1*x_VQRn0QgNLycDSnCFKSAw.png" alt="AWS SAP-C02 Certificate"
+                class="cert-image-thumb">
+            </div>
+            <div class="cert-item-thumb">
+              <strong>AWS Solutions Architect – Associate (SAA-C03)</strong>
+              <img src="https://miro.medium.com/1*MrIuTCCzyjc1OQxvBOH4XA.png" alt="AWS SAA-C03 Certificate"
+                class="cert-image-thumb">
+            </div>
+          </div>
+        </section>
+
+        <section class="industry-expertise-section expertise-progress">
+          <h3 class="section-title">Industry Expertise</h3>
+          <div class="progress-item">
+            <span class="progress-label">Leadership</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="progress-label">Management</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="progress-label">DevOps Engineering</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="progress-label">Cloud Engineering</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="progress-label">App Development</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
