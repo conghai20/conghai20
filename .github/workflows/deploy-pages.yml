@@ -22,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Pages paths are case-sensitive; serve the CV at every casing of /cv.
+      # Done here, not in the repo, because macOS can't hold CV/ and cv/ side by side.
+      - run: for d in cv Cv cV; do cp -r CV "$d"; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
