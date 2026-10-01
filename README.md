@@ -62,4 +62,4 @@ B.Sc. Computer Science, HCMC University of Technology · Vietnamese (native) · 
 
 ### daily.dev
 
-<a href="https://app.daily.dev/hmtam1302"><img src="https://api.daily.dev/devcards/v2/3cLen5md59ydGSJUFBIKn.png?r=zk6" width="356" alt="Huynh Cong Hai's Dev Card"/></a>
+<a href="https://app.daily.dev/conghai20"><img src="https://api.daily.dev/devcards/v2/3cLen5md59ydGSJUFBIKn.png?r=zk6" width="356" alt="Huynh Cong Hai's Dev Card"/></a>
