@@ -21,6 +21,7 @@
 Senior Developer at **CUBE SYSTEM VIETNAM**, working across cloud infrastructure, DevOps, security, architecture and AI systems. Full-stack by origin — PHP/Laravel back-ends, Vue.js and React front-ends, React Native — which is how I bridge development and operations: secure, resilient, cost-efficient cloud platforms that engineering teams can live with.
 
 - ☁️ Managing multi-cloud infrastructure across **AWS, GCP and Azure**, and the platforms underneath AI systems
+- 🧪 Built the **ADE proof of concept** end to end — requirements, data labeling, development and on-premise deployment
 - 🤖 Built a five-node on-premise AI infrastructure and a serverless RAG system on **AWS Lambda + Amazon Bedrock** (AWS CDK)
 - 🔐 Role provisioning across **AWS Organizations + Keycloak SSO**, automated with n8n for temporary access and auto-revocation
 - 🇯🇵 Eight months on-site in **Tokyo**, delivering a product directly with Japanese stakeholders
