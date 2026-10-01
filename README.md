@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0E0D0C&height=220&section=header&text=Huynh%20Cong%20Hai&fontSize=56&fontColor=ECE6DA&desc=DevOps%20%26%20AWS%20Solutions%20Architect&descAlignY=62&descSize=20&animation=fadeIn" alt="Huynh Cong Hai — DevOps & AWS Solutions Architect" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0E0D0C&height=220&section=header&text=Huynh%20Cong%20Hai&fontSize=56&fontColor=ECE6DA&desc=DevOps%20%26%20Cloud%20Solutions%20Architect&descAlignY=62&descSize=20&animation=fadeIn" alt="Huynh Cong Hai — DevOps & Cloud Solutions Architect" />
 </div>
 
 <p align="center">
-  <b>Cloud architecture · DevOps · Security · AI infrastructure</b><br>
+  <b>DevOps · Cloud solutions architecture · AWS · GCP · Azure · On-premise</b><br>
   Ho Chi Minh City, Vietnam · UTC+7
 </p>
 
@@ -20,7 +20,7 @@
 
 Senior Developer at **CUBE SYSTEM VIETNAM**, working across cloud infrastructure, DevOps, security, architecture and AI systems. Full-stack by origin — PHP/Laravel back-ends, Vue.js and React front-ends, React Native — which is how I bridge development and operations: secure, resilient, cost-efficient cloud platforms that engineering teams can live with.
 
-- ☁️ Managing multi-cloud infrastructure across **AWS, GCP and Azure**, and the platforms underneath AI systems
+- ☁️ Managing multi-cloud infrastructure across **AWS, GCP and Azure**, plus **on-premise clusters**, and the platforms underneath AI systems
 - 🧪 Built the **ADE proof of concept** end to end — requirements, data labeling, development and on-premise deployment
 - 🤖 Built a five-node on-premise AI infrastructure and a serverless RAG system on **AWS Lambda + Amazon Bedrock** (AWS CDK)
 - 🔐 Role provisioning across **AWS Organizations + Keycloak SSO**, automated with n8n for temporary access and auto-revocation
