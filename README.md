@@ -10,7 +10,7 @@
 <p align="center">
   <a href="https://conghai20.github.io/conghai20/"><img src="https://img.shields.io/badge/Portfolio-0E0D0C?style=for-the-badge&logo=githubpages&logoColor=BFA06A" alt="Portfolio" /></a>
   <a href="https://conghai20.github.io/conghai20/CV/"><img src="https://img.shields.io/badge/CV-BFA06A?style=for-the-badge&logo=readthedocs&logoColor=0E0D0C" alt="CV" /></a>
-  <a href="mailto:cong.hai10@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:conghai20@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://www.linkedin.com/in/haryo-hh"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
